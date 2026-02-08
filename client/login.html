@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="/assets/images/cover1.jpg" alt="cover">
+      <div>
+        <div class="title">OtakuPins</div>
+        <div class="sub">Login</div>
+      </div>
+    </div>
+    <div class="nav">
+      <a class="active" href="/login.html">Login</a>
+      <a href="/register.html">Register</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <h1>Sign in</h1>
+        <div id="msg"></div>
+        <form onsubmit="handleLogin(event)">
+          <label>Email</label>
+          <input id="email" type="email" placeholder="name@example.com" required />
+
+          <label>Password</label>
+          <input id="password" type="password" placeholder="Your password" required />
+
+          <div style="margin-top:12px;">
+            <button class="btn" type="submit">Login</button>
+          </div>
+          <div class="note">No account? <a href="/register.html">Create one</a></div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Gallery</h2>
+        <div class="note">Add your anime images later (assets/images).</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px;">
+          <img src="/assets/images/cover2.jpg" style="width:100%; border-radius:16px; border:1px solid #ffe1ee;" alt="img">
+          <img src="/assets/images/cover3.jpg" style="width:100%; border-radius:16px; border:1px solid #ffe1ee;" alt="img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

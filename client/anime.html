@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime Search</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="/assets/images/cover1.jpg" alt="cover">
+      <div>
+        <div class="title">OtakuPins</div>
+        <div class="sub">Anime Search</div>
+      </div>
+    </div>
+    <div class="nav">
+      <a id="navPosts" href="/posts.html">Posts</a>
+      <a id="navAnime" class="active" href="/anime.html">Anime Search</a>
+      <a id="navProfile" href="/profile.html">Profile</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>Search</h1>
+      <div id="msg"></div>
+      <form id="form" class="row" style="align-items:end;">
+        <div>
+          <label>Anime title</label>
+          <input id="q" type="text" placeholder="Naruto" />
+        </div>
+        <div style="max-width:180px;">
+          <button class="btn" type="submit">Find</button>
+        </div>
+      </form>
+
+      <div class="note" style="margin-top:10px;">
+        Anime API works with or without a key.
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px;">
+      <h2>Results</h2>
+      <div id="grid" class="animeGrid" style="margin-top:12px;"></div>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/anime.js"></script>
+</body>
+</html>

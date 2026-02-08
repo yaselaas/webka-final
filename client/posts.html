@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posts</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="/assets/images/cover1.jpg" alt="cover">
+      <div>
+        <div class="title">OtakuPins</div>
+        <div class="sub">Posts</div>
+      </div>
+    </div>
+    <div class="nav">
+      <a id="navPosts" href="/posts.html" class="active">Posts</a>
+      <a id="navAnime" href="/anime.html">Anime Search</a>
+      <a id="navProfile" href="/profile.html">Profile</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <h1>New post</h1>
+        <div id="msg"></div>
+        <form id="createForm">
+          <label>Title</label>
+          <input id="title" type="text" maxlength="80" required />
+
+          <label>Content</label>
+          <textarea id="content" maxlength="2000" required></textarea>
+
+          <div style="margin-top:12px;">
+            <button class="btn" type="submit">Save</button>
+          </div>
+        </form>
+
+        <div id="editBox" class="card" style="margin-top:16px; display:none; border-style:dashed;">
+          <h2>Edit</h2>
+          <div id="editMsg"></div>
+          <form id="editForm">
+            <input id="editId" type="hidden" />
+            <label>Title</label>
+            <input id="editTitle" type="text" maxlength="80" required />
+            <label>Content</label>
+            <textarea id="editContent" maxlength="2000" required></textarea>
+            <div style="margin-top:12px;">
+              <button class="btn" type="submit">Update</button>
+              <button class="btn secondary" type="button" id="closeEditBtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>My posts</h2>
+        <div class="note">Saved in MongoDB</div>
+        <div id="postsList" class="list" style="margin-top:12px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/posts.js"></script>
+</body>
+</html>
